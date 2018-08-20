@@ -11,15 +11,19 @@
 		954AF0D4212B2DD600B48B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D2212B2DD600B48B7C /* Main.storyboard */; };
 		954AF0D6212B2DD800B48B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D5212B2DD800B48B7C /* Assets.xcassets */; };
 		954AF0D9212B2DD800B48B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D7212B2DD800B48B7C /* LaunchScreen.storyboard */; };
+		F089E113DC8EF23D704E42C0 /* Pods_NBATeams_GraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF08B3C395B1BA263F4E706A /* Pods_NBATeams_GraphQL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071B0B3AE174B9AC6981702E /* Pods-NBATeams-GraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBATeams-GraphQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBATeams-GraphQL/Pods-NBATeams-GraphQL.debug.xcconfig"; sourceTree = "<group>"; };
+		8D251D96C16D64156191F0E0 /* Pods-NBATeams-GraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBATeams-GraphQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBATeams-GraphQL/Pods-NBATeams-GraphQL.release.xcconfig"; sourceTree = "<group>"; };
 		954AF0CB212B2DD600B48B7C /* NBATeams-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBATeams-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954AF0CE212B2DD600B48B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		954AF0D3212B2DD600B48B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954AF0D5212B2DD800B48B7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954AF0D8212B2DD800B48B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		954AF0DA212B2DD800B48B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF08B3C395B1BA263F4E706A /* Pods_NBATeams_GraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBATeams_GraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F089E113DC8EF23D704E42C0 /* Pods_NBATeams_GraphQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74BA3DF5C0A62E8661EC344F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF08B3C395B1BA263F4E706A /* Pods_NBATeams_GraphQL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8086339DE45D94E5C8963252 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				071B0B3AE174B9AC6981702E /* Pods-NBATeams-GraphQL.debug.xcconfig */,
+				8D251D96C16D64156191F0E0 /* Pods-NBATeams-GraphQL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		954AF0C2212B2DD600B48B7C = {
 			isa = PBXGroup;
 			children = (
 				954AF0CD212B2DD600B48B7C /* NBATeams-GraphQL */,
 				954AF0CC212B2DD600B48B7C /* Products */,
+				8086339DE45D94E5C8963252 /* Pods */,
+				74BA3DF5C0A62E8661EC344F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,9 +100,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 954AF0DD212B2DD800B48B7C /* Build configuration list for PBXNativeTarget "NBATeams-GraphQL" */;
 			buildPhases = (
+				B0DD2D29EE25F45EDB6BE2C5 /* [CP] Check Pods Manifest.lock */,
+				954AF0E1212B337D00B48B7C /* Generate Apollo GraphQL API */,
 				954AF0C7212B2DD600B48B7C /* Sources */,
 				954AF0C8212B2DD600B48B7C /* Frameworks */,
 				954AF0C9212B2DD600B48B7C /* Resources */,
+				B17D0FB4CCD119EF71E19357 /* [CP] Embed Pods Frameworks */,
+				E6846C7AF902394CB2C1B75E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +162,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		954AF0E1212B337D00B48B7C /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift";
+		};
+		B0DD2D29EE25F45EDB6BE2C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBATeams-GraphQL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B17D0FB4CCD119EF71E19357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NBATeams-GraphQL/Pods-NBATeams-GraphQL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBATeams-GraphQL/Pods-NBATeams-GraphQL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6846C7AF902394CB2C1B75E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBATeams-GraphQL/Pods-NBATeams-GraphQL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		954AF0C7212B2DD600B48B7C /* Sources */ = {
@@ -282,11 +378,12 @@
 		};
 		954AF0DE212B2DD800B48B7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071B0B3AE174B9AC6981702E /* Pods-NBATeams-GraphQL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
-				INFOPLIST_FILE = "NBATeams-GraphQL/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NBATeams-GraphQL/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +397,12 @@
 		};
 		954AF0DF212B2DD800B48B7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D251D96C16D64156191F0E0 /* Pods-NBATeams-GraphQL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9L7P6ZCN6;
-				INFOPLIST_FILE = "NBATeams-GraphQL/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NBATeams-GraphQL/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,6 @@
+framework module Pods_NBATeams_GraphQL {
+  umbrella header "Pods-NBATeams-GraphQL-umbrella.h"
+
+  export *
+  module * { export * }
+}
