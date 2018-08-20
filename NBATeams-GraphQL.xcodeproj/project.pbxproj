@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		954AF0CF212B2DD600B48B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF0CE212B2DD600B48B7C /* AppDelegate.swift */; };
-		954AF0D1212B2DD600B48B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF0D0212B2DD600B48B7C /* ViewController.swift */; };
 		954AF0D4212B2DD600B48B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D2212B2DD600B48B7C /* Main.storyboard */; };
 		954AF0D6212B2DD800B48B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D5212B2DD800B48B7C /* Assets.xcassets */; };
 		954AF0D9212B2DD800B48B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954AF0D7212B2DD800B48B7C /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		954AF0CB212B2DD600B48B7C /* NBATeams-GraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NBATeams-GraphQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954AF0CE212B2DD600B48B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		954AF0D0212B2DD600B48B7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		954AF0D3212B2DD600B48B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		954AF0D5212B2DD800B48B7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954AF0D8212B2DD800B48B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,21 @@
 		954AF0CD212B2DD600B48B7C /* NBATeams-GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				954AF0CE212B2DD600B48B7C /* AppDelegate.swift */,
-				954AF0D0212B2DD600B48B7C /* ViewController.swift */,
 				954AF0D2212B2DD600B48B7C /* Main.storyboard */,
+				954AF0E0212B2E9E00B48B7C /* Resources */,
+			);
+			path = "NBATeams-GraphQL";
+			sourceTree = "<group>";
+		};
+		954AF0E0212B2E9E00B48B7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				954AF0CE212B2DD600B48B7C /* AppDelegate.swift */,
 				954AF0D5212B2DD800B48B7C /* Assets.xcassets */,
 				954AF0D7212B2DD800B48B7C /* LaunchScreen.storyboard */,
 				954AF0DA212B2DD800B48B7C /* Info.plist */,
 			);
-			path = "NBATeams-GraphQL";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				954AF0D1212B2DD600B48B7C /* ViewController.swift in Sources */,
 				954AF0CF212B2DD600B48B7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
